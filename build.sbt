@@ -1,7 +1,7 @@
 import com.jsuereth.sbtpgp.PgpKeys
 
 lazy val sharedSettings = Seq(
-  organization := "com.github.dwickern",
+  organization := "com.github.virginzing",
   scalaVersion := "2.13.0",
   crossScalaVersions := Seq(scalaVersion.value, "2.12.1"),
   libraryDependencies ++= Seq(
@@ -10,7 +10,7 @@ lazy val sharedSettings = Seq(
   ),
   publishTo := sonatypePublishToBundle.value,
   pomExtra := {
-    <url>https://github.com/dwickern/scala-nameof</url>
+    <url>https://github.com/virginzing/scala-nameof</url>
     <licenses>
       <license>
         <name>MIT license</name>
@@ -18,15 +18,15 @@ lazy val sharedSettings = Seq(
       </license>
     </licenses>
     <scm>
-      <connection>scm:git:github.com/dwickern/scala-nameof.git</connection>
-      <developerConnection>scm:git:git@github.com:dwickern/scala-nameof.git</developerConnection>
-      <url>github.com/dwickern/scala-nameof.git</url>
+      <connection>scm:git:github.com/virginzing/scala-nameof.git</connection>
+      <developerConnection>scm:git:git@github.com:virginzing/scala-nameof.git</developerConnection>
+      <url>github.com/virginzing/scala-nameof.git</url>
     </scm>
     <developers>
       <developer>
-        <id>dwickern</id>
+        <id>virginzing</id>
         <name>Derek Wickern</name>
-        <url>https://github.com/dwickern</url>
+        <url>https://github.com/virginzing</url>
       </developer>
     </developers>
   }
