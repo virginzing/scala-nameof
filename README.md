@@ -12,12 +12,12 @@ Usage
 
 Add the library as "provided", because it's only needed during compilation and not at runtime:
 
-    libraryDependencies += "com.github.dwickern" %% "scala-nameof" % "2.0.0" % "provided"
+    libraryDependencies += "com.github.virginzing" %% "scala-nameof" % "2.0.0" % "provided"
 
 
 Now you can use `nameOf` to get the name of a variable or class member:
 ```scala
-  import com.github.dwickern.macros.NameOf._
+  import com.github.virginzing.macros.NameOf._
 
   case class Person(name: String, age: Int)
 
@@ -36,7 +36,7 @@ Now you can use `nameOf` to get the name of a variable or class member:
 
 To get the name of a function:
 ```scala
-  import com.github.dwickern.macros.NameOf._
+  import com.github.virginzing.macros.NameOf._
 
   def startCalculation(value: Int): Unit = {
     println(s"Entered ${nameOf(startCalculation _)}")
@@ -51,7 +51,7 @@ To get the name of a function:
 
 Without having an instance of the type:
 ```scala
-  import com.github.dwickern.macros.NameOf._
+  import com.github.virginzing.macros.NameOf._
 
   case class Person(name: String, age: Int)
 
@@ -64,7 +64,7 @@ Without having an instance of the type:
 
 You can also use `nameOfType` to get the unqualified name of a type:
 ```scala
-  import com.github.dwickern.macros.NameOf._
+  import com.github.virginzing.macros.NameOf._
 
   println(nameOf[java.lang.String])
 
@@ -75,7 +75,7 @@ You can also use `nameOfType` to get the unqualified name of a type:
 
 And `qualifiedNameOfType` to get the qualified name:
 ```scala
-  import com.github.dwickern.macros.NameOf._
+  import com.github.virginzing.macros.NameOf._
 
   println(qualifiedNameOfType[java.lang.String])
 
