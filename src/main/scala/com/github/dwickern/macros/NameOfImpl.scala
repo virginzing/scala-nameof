@@ -5,6 +5,17 @@ import scala.reflect.macros.blackbox
 import scala.annotation.tailrec
 
 object NameOfImpl {
+  def objectFunction(c: blackbox.Context)(expr: c.Expr[Any]): c.Expr[String] = {
+    import c.universe._
+    val (obj, method) = expr match {
+      case Select(obj, method) => (obj.toString, method.toString)
+    }
+
+    reify {
+      s"${obj}.${method}"
+    }
+  }
+
   def nameOf(c: blackbox.Context)(expr: c.Expr[Any]): c.Expr[String] = {
     import c.universe._
 
